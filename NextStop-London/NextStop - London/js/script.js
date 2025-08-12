@@ -1,16 +1,16 @@
 
 function acceptCookies() {
-    document.cookie = "cookieAccepted=true; max-age=31536000; path=/";
+    document.cookie = "cookieAccepted=true; max-age=365; path=/";
     document.getElementById("cookieBanner").style.display = "none";
 }
 
 function declineCookies() {
-    document.cookie = "cookieAccepted=false; max-age=31536000; path=/";
+    document.cookie = "cookieAccepted=false; max-age=365; path=/";
     document.getElementById("cookieBanner").style.display = "none";
 }
 
 function essentialCookies() {
-    document.cookie = "cookieAccepted=essential; max-age=31536000; path=/";
+    document.cookie = "cookieAccepted=essential; max-age=365; path=/";
     document.getElementById("cookieBanner").style.display = "none";
 }
 
