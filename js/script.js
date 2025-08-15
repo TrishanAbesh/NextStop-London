@@ -41,4 +41,41 @@ document.addEventListener("DOMContentLoaded", function () {
     return true; // Allows the form to submit if needed
   }
 
+  // js/script.js
+
+let slideIndex = 0;
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+  
+  // hide all slides
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  
+  // show the current slide
+  slides[slideIndex - 1].style.display = "block";
+  
+  // change every 4 seconds
+  setTimeout(showSlides, 2000);
+}
+
+// start the slideshow when the page loads
+document.addEventListener("DOMContentLoaded", showSlides);
+
+// Hamburger menu toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.querySelector("nav ul");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+});
+
 
